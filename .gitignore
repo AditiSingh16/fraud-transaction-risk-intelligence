@@ -1,3 +1,16 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
 # Raw Kaggle dataset
 data/raw/
 *.zip
+
+# Processed datasets
+data/processed/*.parquet
