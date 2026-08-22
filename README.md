@@ -18,6 +18,34 @@ This project develops an analytical decision-support system to help answer:
 
 > Which transactions should be investigated first?
 
+## 🔄 Data Pipeline & Project Workflow
+
+This project follows an end-to-end data and machine learning pipeline that transforms raw transaction data into actionable fraud risk insights.
+
+```text
+Raw IEEE-CIS Dataset
+        │
+        ▼
+01. Data Preparation
+        │
+        ▼
+02. Fraud EDA
+        │
+        ▼
+03. Feature Engineering
+        │
+        ▼
+04. Fraud Modelling
+        │
+        ▼
+05. Model Evaluation
+        │
+        ▼
+06. Risk Analysis
+        │
+        ▼
+Fraud Risk Insights
+
 ## 🛠️ Tech Stack
 
 - Python
