@@ -4,6 +4,8 @@
 # Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
 # Jupyter
 .ipynb_checkpoints/
@@ -12,5 +14,13 @@ __pycache__/
 data/raw/
 *.zip
 
-# Processed datasets
+# Processed datasets and generated model outputs
 data/processed/*.parquet
+data/processed/*.csv
+
+# Python environment / local configuration
+.env
+.env.*
+
+# VS Code
+.vscode/
