@@ -66,20 +66,6 @@ The dataset contains transaction and identity information and includes a binary 
 
 Raw data is not included in this repository because of its size and dataset licensing/usage considerations.
 
-## 🔬 Project Approach
-
-1. Data Quality & Profiling
-2. Exploratory Data Analysis
-3. SQL Transaction Analysis
-4. Feature Engineering
-5. Fraud Classification
-6. Model Evaluation
-7. Explainability
-8. Risk Scoring
-9. Investigation Prioritization
-10. Power BI Dashboard
-11. Business Recommendations
-
 ## 📈 Dashboard
 
 Coming soon.
