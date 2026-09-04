@@ -1,113 +1,77 @@
 # Fraud & Transaction Risk Intelligence
 
-An end-to-end fraud analytics and risk intelligence project combining Python, SQL, machine learning and Power BI to identify suspicious transaction behaviour, prioritize investigations and analyze potential financial exposure.
+An end-to-end **fraud analytics and machine learning project** using Python, SQL, PostgreSQL, and Power BI to identify suspicious transaction behaviour and support risk-based investigation.
 
-## 🎯 Business Problem
+## 🎯 Objective
 
-Fraud detection is not simply a classification problem.
+> **Which transactions and risk segments should be prioritized for investigation?**
 
-Financial institutions must identify suspicious transactions while balancing:
-
-- Fraud detection
-- False positives
-- Investigation capacity
-- Transaction exposure
-- Operational efficiency
-
-This project develops an analytical decision-support system to help answer:
-
-> Which transactions should be investigated first?
-
-## 🔄 Data Pipeline & Project Workflow
-
-This project follows an end-to-end data and machine learning pipeline that transforms raw transaction data into actionable fraud risk insights.
+## 🔄 Workflow
 
 ```text
-Raw IEEE-CIS Dataset
-        │
-        ▼
-01. Data Preparation
-        │
-        ▼
-02. Fraud EDA
-        │
-        ▼
-03. Feature Engineering
-        │
-        ▼
-04. Fraud Modelling
-        │
-        ▼
-05. Model Evaluation
-        │
-        ▼
-06. Risk Analysis
-        │
-        ▼
-Fraud Risk Insights
+IEEE-CIS Dataset
+      ↓
+Data Preparation
+      ↓
+EDA + Feature Engineering
+      ↓
+ML Classification
+      ↓
+SQL Risk Analytics
+      ↓
+Risk Segmentation
+      ↓
+Power BI Dashboard
 ```
 
-## 🛠️ Tech Stack
+## 🧠 Machine Learning
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- XGBoost
-- SQL
-- Power BI
-- Git/GitHub
+Six notebooks covering:
 
-## 📊 Dataset
+* Data preparation & EDA
+* Feature engineering
+* Fraud classification
+* Model evaluation
+* Risk analysis
 
-IEEE-CIS Fraud Detection dataset.
+Models: **Logistic Regression** and **Random Forest**
 
-The dataset contains transaction and identity information and includes a binary fraud target.
-
-Raw data is not included in this repository because of its size and dataset licensing/usage considerations.
-
-## 📈 Dashboard
-
-Coming soon.
-
-## 🤖 Machine Learning
-
-Models will be evaluated using metrics appropriate for imbalanced fraud detection:
-
-- Precision
-- Recall
-- F1-score
-- ROC-AUC
-- PR-AUC
-
-Accuracy will not be used as the primary evaluation metric.
+**Best Model:** Random Forest — **PR-AUC: 0.1996**
 
 ## 🗄️ SQL
 
-SQL will be used for:
+Five PostgreSQL workflows covering:
 
-- Transaction analysis
-- Behavioural analysis
-- Aggregations
-- Customer/transaction summaries
-- Risk segmentation
-- Business questions
-- Window-function analysis
+* Data Quality
+* Transaction Analysis
+* Behavioural Analysis
+* Risk Segmentation
+* Business Questions
 
-## ⚠️ Disclaimer
+Techniques include **CTEs, joins, aggregations, CASE statements, window functions, and conditional analysis.**
 
-This project is an analytical decision-support prototype and is not intended for production fraud detection or financial decision-making.
+## 📊 Power BI
 
-## 📁 Project Structure
+Interactive dashboard for fraud KPIs, transaction exposure, risk segments, behavioural patterns, and investigation prioritization.
+
+## 🛠️ Tech Stack
+
+**Python · Pandas · NumPy · Scikit-learn · SQL · PostgreSQL · Power BI · Git/GitHub**
+
+## 📁 Structure
 
 ```text
 fraud-transaction-risk-intelligence/
 ├── data/
-├── sql/
 ├── notebooks/
+├── sql/
 ├── src/
-├── models/
+├── powerBI/
 ├── reports/
-├── powerbi/
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
+```
+
+## ⚠️ Disclaimer
+
+This is an analytical decision-support prototype and is not intended for production fraud detection or financial decision-making.
