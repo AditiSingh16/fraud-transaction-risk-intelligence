@@ -28,11 +28,11 @@ Power BI Dashboard
 
 Six notebooks covering:
 
-* Data preparation & EDA
-* Feature engineering
-* Fraud classification
-* Model evaluation
-* Risk analysis
+- Data preparation & EDA
+- Feature engineering
+- Fraud classification
+- Model evaluation
+- Risk analysis
 
 Models: **Logistic Regression** and **Random Forest**
 
@@ -42,17 +42,21 @@ Models: **Logistic Regression** and **Random Forest**
 
 Five PostgreSQL workflows covering:
 
-* Data Quality
-* Transaction Analysis
-* Behavioural Analysis
-* Risk Segmentation
-* Business Questions
+- Data Quality
+- Transaction Analysis
+- Behavioural Analysis
+- Risk Segmentation
+- Business Questions
 
 Techniques include **CTEs, joins, aggregations, CASE statements, window functions, and conditional analysis.**
 
 ## 📊 Power BI
 
 Interactive dashboard for fraud KPIs, transaction exposure, risk segments, behavioural patterns, and investigation prioritization.
+
+## Power BI Dashboard
+
+![Fraud Risk Dashboard](dashboard/fraud_riskdashboard.png)
 
 ## 🛠️ Tech Stack
 
