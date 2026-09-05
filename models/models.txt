@@ -1,0 +1,101 @@
+# Model Documentation
+
+## Overview
+
+This project uses machine learning to identify potentially fraudulent transactions from the IEEE-CIS Fraud Detection dataset.
+
+Because fraud is a highly imbalanced classification problem, model performance was evaluated using Precision, Recall, F1 Score, ROC-AUC, and PR-AUC rather than relying on accuracy alone.
+
+## Models Used
+
+### Logistic Regression
+
+Logistic Regression was used as the baseline classification model.
+
+It provides a simple benchmark for evaluating whether the engineered transaction, identity, card, device, and behavioural features contain useful signals for detecting fraud.
+
+### Random Forest
+
+Random Forest was used as the main tree-based classification model.
+
+It was selected because it can capture non-linear relationships and interactions between different transaction and risk-related features.
+
+## Model Performance
+
+| Model               | Precision | Recall | F1 Score | ROC-AUC | PR-AUC |
+| ------------------- | --------: | -----: | -------: | ------: | -----: |
+| Logistic Regression |    0.0662 | 0.7554 |   0.1217 |  0.7757 | 0.1444 |
+| Random Forest       |    0.0982 | 0.6484 |   0.1706 |  0.7960 | 0.1996 |
+
+## Selected Model
+
+**Random Forest** was selected as the best overall model based on **PR-AUC of 0.1996**.
+
+Logistic Regression achieved higher recall, meaning it identified a larger proportion of fraudulent transactions. However, Random Forest achieved better Precision, F1 Score, ROC-AUC, and PR-AUC.
+
+Therefore, Random Forest provided the stronger overall balance for this fraud-detection task.
+
+## Preprocessing
+
+The modelling workflow used Scikit-learn pipelines to handle preprocessing consistently.
+
+The pipeline included:
+
+* Median imputation for missing numerical values
+* Most-frequent imputation for missing categorical values
+* Standard scaling of numerical features
+* One-hot encoding of categorical features
+* Handling of previously unseen categorical values
+
+## Final Feature Set
+
+The final modelling dataset used 21 selected features covering several categories of fraud-related signals:
+
+### Transaction Behaviour
+
+* TransactionAmt
+* TransactionHour
+* TransactionDay
+* TransactionWeek
+* LogTransactionAmt
+* TransactionAmtDecimals
+* AmountVsMedian
+* AmountZScore
+
+### Missingness & Identity Signals
+
+* MissingFeatureCount
+* MissingFeatureRatio
+* IdentityFeatureCount
+* HasIdentityInfo
+* HasDeviceInfo
+
+### Card & Address Signals
+
+* CardFeatureCount
+* AddressFeatureCount
+* card4
+* card6
+
+### Categorical Information
+
+* ProductCD
+* DeviceType
+* P_emaildomain
+* R_emaildomain
+
+These features were designed to capture transaction behaviour, unusual amounts, missing information, identity availability, device information, and card/product characteristics.
+
+## Model Selection Rationale
+
+PR-AUC was given particular importance because fraudulent transactions represent a small minority of the overall dataset.
+
+In this setting, a model that simply achieves high accuracy could still perform poorly at identifying fraud.
+
+The Random Forest model achieved a PR-AUC of **0.1996**, compared with **0.1444** for Logistic Regression, making it the preferred model for this project.
+
+## Project Note
+
+The model is intended as a portfolio-level fraud-risk analysis solution rather than a production fraud-prevention system.
+
+The project demonstrates an end-to-end workflow combining data preparation, feature engineering, machine learning, model evaluation, SQL analysis, PostgreSQL, and business-oriented risk analysis.
